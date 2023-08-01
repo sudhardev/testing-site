@@ -1,0 +1,11 @@
+
+{% for movie in movies %}
+    <strong>
+        {{movie.title}} <br>
+    </strong>
+    {{movie.vote_average}} <br>
+    {{movie.release_date}} <br>
+    {{movie.overview}} <br>
+    <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" alt="{{ title }} Poster">
+    <img src="https://image.tmdb.org/t/p/w200/{{ movie.backdrop_path }}" alt="{{ title }} Poster">
+{% endfor %} <br>

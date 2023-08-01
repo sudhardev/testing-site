@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testapp</title>
+</head>
+<body>
+    <p>HI friends</p>
+    <ul>
+    </ul>
+
+    <input type="text" id="title" name="title" placeholder="here">
+    <button type="submit">submit</button>
+
+    {% for movie in movies %}
+    
+        <a href="{% url 'testapp:movie' movie.title %}">
+            <h3>{{movie.title}}</h3>
+        </a> <br>
+        {{movie.vote_average}} <br>
+        {{movie.release_date}} <br>
+        {{movie.overview}} <br>
+    <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" alt="{{ title }} Poster">
+    <img src="https://image.tmdb.org/t/p/w200/{{ movie.backdrop_path }}" alt="{{ title }} Poster">
+    {% endfor %} <br>
+
+    
+   
+    
+</body>
+</html>
